@@ -1,5 +1,10 @@
 <template>
-    <v-navigation-drawer app>
+    <v-navigation-drawer 
+    v-model="drawer"
+    app
+    clipped
+    mini-variant
+    permanent>
         <v-list
         dense
         nav>
