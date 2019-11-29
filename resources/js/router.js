@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Home from '@/js/components/Home';
+import Dashboard from '@/js/components/Dashboard';
 
 Vue.use(VueRouter);
 
@@ -11,8 +11,8 @@ export const router = new VueRouter({
     [
         {
             path: '/',
-            name: 'Home',
-            component: Home
+            name: 'Dashboard',
+            component: Dashboard
         }
     ]
 })
