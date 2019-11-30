@@ -13,13 +13,17 @@
           :key="item.title"
           link
         >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
+        <v-tooltip right>
+          <template v-slot:activator="{ on }">
+            <v-avatar>
+              <v-icon v-on="on">{{ item.icon }}</v-icon>
+            </v-avatar>
+          </template>
+          <span>{{ item.title }}</span>
+        </v-tooltip>
+          
+
         </v-list-item>
 
         </v-list>
@@ -33,8 +37,10 @@ export default {
       return {
         items: [
           { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-          { title: 'Photos', icon: 'mdi-image' },
-          { title: 'About', icon: 'mdi-help-box' },
+          { title: 'Roster', icon: 'fas fa-user-secret' },
+          { title: 'Events', icon: 'fas fa-book-dead' },
+          { title: 'Ledger', icon: 'fas fa-scroll' },
+          { title: 'Settings', icon: 'fas fa-cogs' },
         ],
         right: null,
       }
